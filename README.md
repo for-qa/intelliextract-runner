@@ -8,6 +8,24 @@ IntelliExtract Runner is a high-performance TypeScript application designed to o
 
 ![IntelliExtract Dashboard](docs/dashboard.png)
 
+<details>
+<summary><b>✨ View More Dashboard Features (Inventory, Analytics, Data Explorer)</b></summary>
+<br>
+
+### 📦 Staging Inventory
+Tracks S3 file synchronization state and locally staged data volumes.
+![Staging Inventory](docs/inventory.png)
+
+### 📊 Run Summary Analytics
+Provides latency tracking, throughput metrics, and error distribution.
+![Run Summary Analytics](docs/run_summary.png)
+
+### 🔍 Data Explorer
+Browse and export raw extraction results directly from the browser.
+![Data Explorer](docs/data_explorer.png)
+
+</details>
+
 ---
 
 ## 🏗️ Architecture & Design Principles
