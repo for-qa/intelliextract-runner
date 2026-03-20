@@ -6,6 +6,8 @@
 
 IntelliExtract Runner is a high-performance TypeScript application designed to orchestrate large-scale data extraction from the IntelliExtract Spreadsheet API. Built on **Clean Architecture** principles, it provides a robust CLI and a stunning Web Dashboard for managing S3 synchronization, batch extraction, scheduling, and analytics.
 
+![IntelliExtract Dashboard](docs/dashboard.png)
+
 ---
 
 ## 🏗️ Architecture & Design Principles
