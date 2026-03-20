@@ -75,10 +75,7 @@ export class NodemailerEmailService implements IEmailService {
                 <!-- Header -->
                 <tr>
                   <td align="center" style="padding:30px 30px 0 30px;">
-                    <img 
-                      src="https://alpha.cdn.intellirevenue.com/general/intellirevenue-logo.png"
-                      alt="IntelliRevenue Logo" width="210"
-                      style="display:block;margin-bottom:10px;">
+                    <span style="display:block;font-size:20px;font-weight:700;color:#2D9B8A;margin-bottom:10px;letter-spacing:-0.5px;">IntelliExtract Runner</span>
                     <hr style="border:none;border-top:#e4e4e7 2px solid;width:100%;max-width:640px;margin:0 auto 10px auto;">
                   </td>
                 </tr>
@@ -132,8 +129,8 @@ export class NodemailerEmailService implements IEmailService {
                 <tr>
                   <td align="center" style="padding:10px 30px 35px 30px;font-size:12px;color:#888;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
                     <hr style="border:none;border-top:#e4e4e7 2px solid;width:100%;max-width:640px;margin:0 auto 18px auto;">
-                    This is an automated message from the IntelliExtract Runner.<br>
-                    © ${currentYear} IntelliRevenue. All rights reserved.
+                    This is an automated message from IntelliExtract Runner.<br>
+                    © ${currentYear} IntelliExtract Runner. Open-source portfolio project.
                   </td>
                 </tr>
               </tbody>
@@ -250,8 +247,8 @@ export class NodemailerEmailService implements IEmailService {
     </div>
 
     <div class="footer">
-      This is an automated notification from your IntelliExtract Runner.
-      <br>&copy; ${new Date().getFullYear()} intellirevenue
+      This is an automated notification from IntelliExtract Runner.
+      <br>&copy; ${new Date().getFullYear()} IntelliExtract Runner. Open-source portfolio project.
     </div>
   </div>
 </body>

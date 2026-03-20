@@ -72,7 +72,7 @@ export class NodemailerService implements INotificationService {
               <tbody>
                 <tr>
                   <td align="center" style="padding:30px 30px 0 30px;">
-                    <img src="https://alpha.cdn.intellirevenue.com/general/intellirevenue-logo.png" alt="Logo" width="210">
+                    <span style="display:block;font-size:20px;font-weight:700;color:#2D9B8A;margin-bottom:10px;letter-spacing:-0.5px;">IntelliExtract Runner</span>
                     <hr style="border:none;border-top:#e4e4e7 2px solid;width:100%;max-width:640px;margin:20px auto;">
                   </td>
                 </tr>
@@ -102,7 +102,7 @@ export class NodemailerService implements INotificationService {
                 </tr>
                 <tr>
                   <td align="center" style="padding:20px;font-size:12px;color:#888;">
-                    &copy; ${new Date().getFullYear()} IntelliRevenue. All rights reserved.
+                    &copy; ${new Date().getFullYear()} IntelliExtract Runner. Open-source portfolio project.
                   </td>
                 </tr>
               </tbody>
