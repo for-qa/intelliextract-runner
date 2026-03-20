@@ -16,14 +16,24 @@ export function loadStaticAssets(root: string) {
   let favIcon = "";
 
   try {
-    const logoPath = join(root, "assets", "logo.png");
-    if (existsSync(logoPath)) {
-      const buffer = readFileSync(logoPath);
+    // Prefer SVG (crisp at all sizes), fall back to PNG
+    const svgPath = join(root, "assets", "logo.svg");
+    const pngPath = join(root, "assets", "logo.png");
+    if (existsSync(svgPath)) {
+      const buffer = readFileSync(svgPath);
+      logo = `data:image/svg+xml;base64,${buffer.toString("base64")}`;
+    } else if (existsSync(pngPath)) {
+      const buffer = readFileSync(pngPath);
       logo = `data:image/png;base64,${buffer.toString("base64")}`;
     }
-    const smallLogoPath = join(root, "assets", "logo-small.png");
-    if (existsSync(smallLogoPath)) {
-      const buffer = readFileSync(smallLogoPath);
+
+    const svgSmallPath = join(root, "assets", "logo-small.svg");
+    const pngSmallPath = join(root, "assets", "logo-small.png");
+    if (existsSync(svgSmallPath)) {
+      const buffer = readFileSync(svgSmallPath);
+      smallLogo = `data:image/svg+xml;base64,${buffer.toString("base64")}`;
+    } else if (existsSync(pngSmallPath)) {
+      const buffer = readFileSync(pngSmallPath);
       smallLogo = `data:image/png;base64,${buffer.toString("base64")}`;
     }
   } catch (_) {}
@@ -38,3 +48,4 @@ export function loadStaticAssets(root: string) {
 
   return { logo, smallLogo, favIcon };
 }
+
