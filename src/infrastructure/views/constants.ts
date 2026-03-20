@@ -38,13 +38,7 @@ export function loadStaticAssets(root: string) {
     }
   } catch (_) {}
 
-  try {
-    const favPath = join(root, "assets", "favicon.ico");
-    if (existsSync(favPath)) {
-      const buffer = readFileSync(favPath);
-      favIcon = `data:image/x-icon;base64,${buffer.toString("base64")}`;
-    }
-  } catch (_) {}
+  favIcon = smallLogo;
 
   return { logo, smallLogo, favIcon };
 }
