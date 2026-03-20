@@ -1,5 +1,7 @@
 # IntelliExtract Runner
 
+[![CI](https://github.com/for-qa/intelliextract-runner/actions/workflows/ci.yml/badge.svg)](https://github.com/for-qa/intelliextract-runner/actions/workflows/ci.yml)
+
 **A Professional, High-Performance Extraction Orchestrator & Dashboard**
 
 IntelliExtract Runner is a high-performance TypeScript application designed to orchestrate large-scale data extraction from the IntelliExtract Spreadsheet API. Built on **Clean Architecture** principles, it provides a robust CLI and a stunning Web Dashboard for managing S3 synchronization, batch extraction, scheduling, and analytics.
@@ -87,7 +89,6 @@ Edit `.env` with your API credentials:
 
 ```bash
 npm run build    # Compile TypeScript to dist/
-npm run dev      # Start development watcher
 ```
 
 ### Browser App (Dashboard)
@@ -139,6 +140,15 @@ Benchmarks are generated automatically during every run. View the results in:
 
 ---
 
+## 🔒 Security Note
+
+- All real API credentials, AWS keys, and URLs are loaded from `.env` — never hardcoded.
+- Secrets support optional **Fernet symmetric encryption** at rest (see `.env.example`).
+- Copy `.env.example` → `.env` and fill in your values. **Never commit a real `.env` file.**
+- `config/config.yaml` is gitignored. Copy `config/config.example.yaml` to get started.
+
+---
+
 ## 📜 License
 
-© 2026 IntelliRevenue. All rights reserved.
+MIT License — see [LICENSE](LICENSE) for details.

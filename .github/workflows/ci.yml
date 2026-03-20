@@ -1,0 +1,42 @@
+name: CI
+
+# =============================================================================
+# Pipeline Layout:
+#
+#   quality-gate  — TypeScript build check + Vitest unit tests (fast-fail)
+#
+# The app requires private API credentials and AWS keys to run E2E,
+# so the CI pipeline focuses on build verification and unit tests only.
+# =============================================================================
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  quality-gate:
+    name: "Quality Gate: Build & Unit Tests"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript build check
+        run: npm run build
+
+      - name: Unit Tests (Vitest)
+        run: npm test
