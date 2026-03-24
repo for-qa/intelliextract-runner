@@ -24,7 +24,7 @@
     "extraction",
     "benchmark"
   ],
-  "author": "",
+  "author": "for-qa",
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0"
