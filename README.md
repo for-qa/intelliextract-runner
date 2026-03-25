@@ -53,6 +53,17 @@ This project is built to enterprise standards for maintainability and scalabilit
 
 ---
 
+## 🛠️ Tech Stack
+
+This project leverages a robust ecosystem for background processing and high-availability storage:
+- **Core Runtime**: Node.js (v20+) with TypeScript
+- **Database**: SQLite (`better-sqlite3`) for high-concurrency ACID persistence
+- **Cloud Infrastructure**: AWS SDK for S3 operations
+- **Job Orchestration**: `p-queue` and `node-cron`
+- **Testing**: Vitest for unit coverage
+
+---
+
 ## 🛠️ Project Structure
 
 ```text
@@ -114,7 +125,7 @@ npm run build    # Compile TypeScript to dist/
 ### Browser App (Dashboard)
 
 ```bash
-npm run app      # Starts the dashboard at http://localhost:8765
+npm run app      # Starts the dashboard at http://localhost:8105
 ```
 
 ### CLI Mode

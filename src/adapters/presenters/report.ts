@@ -2075,7 +2075,7 @@ export function htmlReportFromHistory(
           return;
         }
       } catch (e) {}
-      const baseUrl = window.location.protocol === 'file:' ? 'http://localhost:8765' : window.location.origin;
+      const baseUrl = window.location.protocol === 'file:' ? 'http://localhost:8105' : window.location.origin;
       window.location.href = baseUrl;
     }
 

@@ -48,7 +48,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const PORT = parseInt(process.env.PORT ?? "8767", 10);
+const PORT = parseInt(process.env.PORT ?? "8105", 10);
 const ROOT = resolve(__dirname, "..");
 const BRAND_PURCHASERS = loadBrandPurchasers();
 
